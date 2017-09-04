@@ -131,7 +131,7 @@
       <td><input type="number" class="sheet-table_input" name="attr_XP_INI" value="0"/></td>
       <td><input type="number" class="sheet-table_input" name="attr_niv_INI" value="0"/></td>
       <td><input type="number" class="sheet-table_input" name="attr_bonus_INI" value="0"/></td>
-      <td><input type="number" class="sheet-table_input" name="attr_Total_INI" value="@{base_INI}+@{niv_INI}+@{bonus_INI}" disabled="true"/></td>
+      <td><input type="number" class="sheet-table_input" name="attr_Total_INI" value="@{REF}+@{niv_INI}+@{bonus_INI}" disabled="true"/></td>
     </tr>
     <tr>
       <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e a une défense de [[d10!+@{REF}+@{Total_Esquive}+@{Total_SensCombat} + ?{Modifier|0}]]"></button></td>
@@ -161,7 +161,7 @@
         <th style="width:50px">Total</th>
       </tr>
       <tr>
-        <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test d'Habillement et de style à [[d10!+ @{Attribut_Habillement} + @{Total_Habillement} + ?{Modifier|0}]]"></button></td>
+        <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test d'Habillement et de style à [[d10!+ @{Total_Habillement} + ?{Modifier|0}]]"></button></td>
           <td>Habillement et style</td>
             <td><select class="sheet-table_input" name="attr_Attribut_Habillement">
               <option value="0"></option>
@@ -182,7 +182,7 @@
             <td><input type="number" class="sheet-table_input" name="attr_Total_Habillement" value="@{Attribut_Habillement}+@{base_Habillement}+@{niv_Habillement}+@{bonus_Habillement}" disabled="true"/></td>
       </tr>
       <tr>
-        <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test de look à [[d10!+ @{Attribut_Look} + @{Total_Look} + ?{Modifier|0}]]"></button></td>
+        <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test de look à [[d10!+ @{Total_Look} + ?{Modifier|0}]]"></button></td>
           <td>Look</td>
             <td><select class="sheet-table_input" name="attr_Attribut_Look">
               <option value="0"></option>
