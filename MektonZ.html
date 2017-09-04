@@ -1,11 +1,208 @@
 <!-- définir les onglets (Personnage / Mecha (dans un second temps/optionnel) ) -->
 
 <!-- définir Template (jet de compétence / attaque / initiative/défense) -->
+    <!-- Jet d'compétence -->
+            <!-- ressemble à Nom_de_comp | Résultat | carac utilisée si possible - entouré en vert/rouge si critique -->
+    <!-- Jet d'attaque -->
+            <!-- ressemble à "PJ attaque" | Attaque : Résultat | Dégats : Résultat | Localisation : Résultat - entouré en vert/rouge si critique -->
+    <!-- Jet d'initiative/défense -->
+            <!-- ressemble à Initiative/Défense | Résultat - entouré en vert/rouge si critique -->
 
 <!-- Partie Descriptif (yeux/cheveux/age/classe/caract) -->
 
+<div class='sheet-2colrow'>
+      <div class='sheet-col'>
+          <div class="sheet-banner" style="width:400px"></div>  <!-- A voir si on garde ou pas-->
+          <br>
+          <table class="sheet-black">
+              <tr><th>Personnage</th></tr><tr><td><input type="text" class="sheet-table_input" name="attr_nom_perso"/></td></tr>
+              <tr><th>Joueur</th></tr><tr><td><input type="text" class="sheet-table_input" name="attr_nom_joueur"/></td></tr>
+              <tr><th>Disponibilité</th></tr><tr><td><input type="text" class="sheet-table_input" name="attr_dispo_perso"/></td></tr>
+          </table>
+      </div>
+      <div class='sheet-col'>
+          <table class="sheet-black">
+              <tr>
+                  <th>Métiers - Formations</th>
+                  <th>Age / Date de naissance</th>
+              </tr>
+              <tr>
+                  <td><input type="text" class="sheet-table_input" name="attr_Classe"/></td>
+                  <td><input type="text" class="sheet-table_input" name="attr_Age"/></td>
+              </tr>
+          </table>
+          <br>
+          <table class="sheet-black">
+              <tr><th colspan="4">Caractéristiques</th></tr>
+              <tr>
+                  <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test de Beauté de [[d10!+ @{BT} + ?{Modifier|0}]]"></button></td><td><input type="number" class="sheet-table_input" name="attr_BT" value="0"/></td><td>Beauté</td>
+                  <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test de Stabilité de [[d10!+ @{ST} + ?{Modifier|0}]]"></button></td><td><input type="number" class="sheet-table_input" name="attr_ST" value="floor(@{SF}*5/2)" disabled="true"/></td><td>Stabilité</td>
+              </tr>
+              <tr>
+                  <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test de Chance de [[d10!+ @{CH} + ?{Modifier|0}]]"></button></td><td><input type="number" class="sheet-table_input" name="attr_CH" value="0"/></td><td>Chance</td>
+                  <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test de Constitution de [[d10!+ @{CON} + ?{Modifier|0}]]"></button></td><td><input type="number" class="sheet-table_input" name="attr_CON" value="0"/></td><td>Constitution</td>
+              </tr>
+              <tr>
+                  <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test d'Empathie de [[d10!+ @{EMP} + ?{Modifier|0}]]"></button></td><td><input type="number" class="sheet-table_input" name="attr_EMP" value="0"/></td><td>Empathie</td>
+                  <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test de Course de [[d10!+ @{Course} + ?{Modifier|0}]]"></button></td><td><input type="number" class="sheet-table_input" name="attr_Course" value="floor(@{MV}*3)" disabled="true"/></td><td>Course</td>
+              </tr>
+              <tr>
+                  <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test d'Intelligence de [[d10!+ @{INT} + ?{Modifier|0}]]"></button></td><td><input type="number" class="sheet-table_input" name="attr_INT" value="0"/></td><td>Intelligence</td>
+                  <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test de Saut de [[d10!+ @{Saut} + ?{Modifier|0}]]"></button></td><td><input type="number" class="sheet-table_input" name="attr_Saut" value="floor(@{MV}*5/2)" disabled="true"/></td><td>Saut</td>
+              </tr>
+              <tr>
+                  <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test de Mouvement de [[d10!+ @{MV} + ?{Modifier|0}]]"></button></td><td><input type="number" class="sheet-table_input" name="attr_MV" value="0"/></td><td>Mouvement</td>
+                  <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test de Saut lancé de [[d10!+ @{SautL} + ?{Modifier|0}]]"></button></td><td><input type="number" class="sheet-table_input" name="attr_SautL" value="floor(@{Course}/4)" disabled="true"/></td><td>Saut Lancé</td>
+              </tr>
+              <tr>
+                  <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test de Réflexes de [[d10!+ @{REF} + ?{Modifier|0}]]"></button></td><td><input type="number" class="sheet-table_input" name="attr_REF" value="0"/></td><td>Reflexes</td>
+                  <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test de Sang-froid de [[d10!+ @{SF} + ?{Modifier|0}]]"></button></td><td><input type="number" class="sheet-table_input" name="attr_SF" value="0"/></td><td>Sang-froid</td>
+              </tr>
+              <tr>
+                  <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test de Technologie de [[d10!+ @{TECH} + ?{Modifier|0}]]"></button></td><td><input type="number" class="sheet-table_input" name="attr_TECH" value="0"/></td><td>Technologie</td>
+                  <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test d'Éducation de [[d10!+ @{EDU} + ?{Modifier|0}]]"></button></td><td><input type="number" class="sheet-table_input" name="attr_EDU" value="0"/></td><td>Education</td>
+              </tr>
+          </table>
+      </div>
+</div>
+
 <!-- Partie Combat (Localisation/initiative/defense/combat)-->
 
+        <!-- Partie localisation-->
+<div>
+  <table class="sheet-black">
+   <tr><th colspan="7">Table de localisation, protection et PdV</th></tr>
+   <tr>
+    <th>1d10!:</th>
+    <th>1</th>
+    <th>2-4</th>
+    <th>5</th>
+    <th>6</th>
+    <th>7-8</th>
+    <th>9-10</th>
+   </tr>
+   <tr>
+    <th>Localisation :</th>
+    <th>Tête</th>
+    <th>Torse</th>
+    <th>Bras droit</th>
+    <th>Bras gauche</th>
+    <th>Jambe droite</th>
+    <th>Jambe gauche</th>
+   </tr>
+   <tr>
+    <th>PP:</th>
+    <td><input type="number" class="sheet-table_input" name="attr_pp_tete"/></td>
+    <td><input type="number" class="sheet-table_input" name="attr_pp_torse"/></td>
+    <td><input type="number" class="sheet-table_input" name="attr_pp_brasD"/></td>
+    <td><input type="number" class="sheet-table_input" name="attr_pp_brasG"/></td>
+    <td><input type="number" class="sheet-table_input" name="attr_pp_jambeD"/></td>
+    <td><input type="number" class="sheet-table_input" name="attr_pp_jambeG"/></td>
+   </tr>
+   <tr>
+    <th>PdV:</th>
+    <td><input type="number" class="sheet-table_input" name="attr_pdv_tete"/></td>
+    <td><input type="number" class="sheet-table_input" name="attr_pdv_torse"/></td>
+    <td><input type="number" class="sheet-table_input" name="attr_pdv_brasD"/></td>
+    <td><input type="number" class="sheet-table_input" name="attr_pdv_brasG"/></td>
+    <td><input type="number" class="sheet-table_input" name="attr_pdv_jambeD"/></td>
+    <td><input type="number" class="sheet-table_input" name="attr_pdv_jambeG"/></td>
+   </tr>
+  </table>
+</div>
+
+        <!-- Partie Jet d'initiative et défense-->
+
+<div>
+  <table class="sheet-black" >
+    <tr>
+      <th style="width:30px">Roll</th>
+      <th style="width:200px">Jet de...</th>
+      <th style="width:50px">Base</th>
+      <th style="width:50px">XP</th>
+      <th style="width:50px">Niv</th>
+      <th style="width:50px">Bonus</th>
+      <th style="width:50px">Total</th>
+    </tr>
+    <tr>
+      <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e a une initiative de [[d10!+ @{REF} + @{Total_SensCombat} + ?{Modifier|0}]]"></button></td>
+      <td>Initiative</td>
+      <td><input type="number" class="sheet-table_input" name="attr_base_INI" value="floor(@{REF})" disabled="true"/></td>
+      <td><input type="number" class="sheet-table_input" name="attr_XP_INI" value="0"/></td>
+      <td><input type="number" class="sheet-table_input" name="attr_niv_INI" value="0"/></td>
+      <td><input type="number" class="sheet-table_input" name="attr_bonus_INI" value="0"/></td>
+      <td><input type="number" class="sheet-table_input" name="attr_Total_INI" value="@{base_INI}+@{niv_INI}+@{bonus_INI}" disabled="true"/></td>
+    </tr>
+    <tr>
+      <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e a une défense de [[d10!+@{REF}+@{Total_Esquive}+@{Total_SensCombat} + ?{Modifier|0}]]"></button></td>
+      <td>Défense</td>
+      <td><input type="number" class="sheet-table_input" name="attr_base_DEF" value="floor(@{REF})" disabled="true"/></td>
+      <td><input type="number" class="sheet-table_input" name="attr_XP_DEF" value="0"/></td>
+      <td><input type="number" class="sheet-table_input" name="attr_niv_DEF" value="0"/></td>
+      <td><input type="number" class="sheet-table_input" name="attr_bonus_DEF" value="0"/></td>
+      <td><input type="number" class="sheet-table_input" name="attr_Total_DEF" value="@{base_DEF}+@{niv_DEF}+@{bonus_DEF}" disabled="true"/></td>
+    </tr>
+</div>
+  
 <!-- Partie Compétences (jets à faire) -->
 
+<div>
+  <table class="sheet-black" >
+    <tr>
+    <input class="sheet-skill_title" value="Compétences de Beauté" readonly/>
+      <tr>
+        <th style="width:30px">Roll</th>
+        <th style="width:200px">Jet de...</th>
+        <th style="width:200px">Caractéristique</th>
+        <th style="width:50px">Base</th>
+        <th style="width:50px">XP</th>
+        <th style="width:50px">Niv</th>
+        <th style="width:50px">Bonus</th>
+        <th style="width:50px">Total</th>
+      </tr>
+      <tr>
+        <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test d'Habillement et de style à [[d10!+ @{Attribut_Habillement} + @{Total_Habillement} + ?{Modifier|0}]]"></button></td>
+          <td>Habillement et style</td>
+            <td><select class="sheet-table_input" name="attr_Attribut_Habillement">
+              <option value="0"></option>
+              <option value="@{BT}" selected>Beauté</option>
+              <option value="@{CH}">Chance</option>
+              <option value="@{CON}">Constitution</option>
+              <option value="@{EMP}">Empathie</option>
+              <option value="@{INT}">Intelligence</option>
+              <option value="@{MV}">Mouvement</option>
+              <option value="@{REF}">Reflexes</option>
+              <option value="@{SF}">Sang-froid</option>
+              <option value="@{TECH}">Technologie</option></select>
+            </td>
+            <td><input type="number" class="sheet-table_input" name="attr_base_Habillement" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_XP_Habillement" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_niv_Habillement" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_bonus_Habillement" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_Total_Habillement" value="@{Attribut_Habillement}+@{base_Habillement}+@{niv_Habillement}+@{bonus_Habillement}" disabled="true"/></td>
+      </tr>
+      <tr>
+        <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test de look à [[d10!+ @{Attribut_Look} + @{Total_Look} + ?{Modifier|0}]]"></button></td>
+          <td>Look</td>
+            <td><select class="sheet-table_input" name="attr_Attribut_Look">
+              <option value="0"></option>
+              <option value="@{BT}" selected>Beauté</option>
+              <option value="@{CH}">Chance</option>
+              <option value="@{CON}">Constitution</option>
+              <option value="@{EMP}">Empathie</option>
+              <option value="@{INT}">Intelligence</option>
+              <option value="@{MV}">Mouvement</option>
+              <option value="@{REF}">Reflexes</option>
+              <option value="@{SF}">Sang-froid</option>
+              <option value="@{TECH}">Technologie</option></select>
+            </td>
+            <td><input type="number" class="sheet-table_input" name="attr_base_Look" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_XP_Look" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_niv_Look" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_bonus_Look" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_Total_Look" value="@{Attribut_Look}+@{base_Look}+@{niv_Look}+@{bonus_Look}" disabled="true"/></td>
+      </tr>
+    </tr>
+  </table>
+</div>
 <!-- Partie Equipement -->
