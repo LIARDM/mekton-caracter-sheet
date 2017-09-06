@@ -24,8 +24,16 @@
               <option value="Public">Public</option></select></td></tr>
           </table>
           <table class="sheet-black">
-              <tr><th style="width:120px">XP totaux</th><th style="width:120px">XP dépensés</th><th style="width:120px">XP restants</th></tr>
-              <tr><td><input type="number" class="sheet-table_input" name="attr_XP_recus" value="0" style="width:120px"/></td><td><input type="number" class="sheet-table_input" name="attr_XP_dep" value="@{XP_INI}+@{XP_DEF}+@{XP_Habillement}+@{XP_Look}+@{XP_Endurance}+@{XP_Force}+@{XP_Natation}+@{XP_Comedie}+@{XP_Commandement}+@{XP_Interview}+@{XP_Psychologie}+@{XP_Séduction}+@{XP_Étiquette}+@{XP_Composition}+@{XP_Déguisement}+@{XP_Enseignement}+@{XP_Expert1}+@{XP_Expert2}+@{XP_Expert3}+@{XP_Jeu}+@{XP_Perception}+@{XP_Programmation}+@{XP_Suivre}+@{XP_Survie}+@{XP_ArmeA}+@{XP_ArmeL}+@{XP_ArmeFusil}+@{XP_ArmeBlanche}+@{XP_ArmePistolet}+@{XP_Esquive}+@{XP_Cac1}+@{XP_Cac2}+@{XP_Apesanteur}+@{XP_Athlétisme}+@{XP_Conduire}+@{XP_Danse}+@{XP_Discrétion}+@{XP_Pilotage}+@{XP_MéchaArtil}+@{XP_MéchaCombat}+@{XP_MéchaMêlée}+@{XP_MéchaMissile}+@{XP_MéchaPilotage}+@{XP_ConnRue}+@{XP_Interrogatoire}+@{XP_Intimidation}+@{XP_Éloquence}+@{XP_ResiTor}+@{XP_Bricolage}+@{XP_Chanter}+@{XP_Musique}+@{XP_Peinture}+@{XP_Photo}+@{XP_Soins}+@{XP_Réparation}+@{XP_Crochetage}+@{XP_Pickpocket}+@{XP_Explosifs}+@{XP_MechaDesign}+@{XP_MechaTech}+@{XP_SensCombat}+@{XP_Langue1}+@{XP_Langue2}+@{XP_Langue3}+@{XP_Langue4}+@{XP_Recherche}+@{XP_Gestion}+@{XP_Médecine}+@{XP_Sciences1}+@{XP_Sciences2}+@{XP_Sciences3}+@{XP_Sciences4}" disabled="true"  style="width:120px"/></td><td style="width:120px"><input type="number" class="sheet-table_input" name="attr_XP_reste" value="@{XP_recus}-@{XP_dep}" disabled="true" style="width:120px"/></td></tr>              
+              <tr>
+                  <th style="width:120px">XP totaux</th>
+                  <th style="width:120px">XP dépensés</th>
+                  <th style="width:120px">XP restants</th>
+              </tr>
+              <tr>
+                  <td><input type="number" class="sheet-table_input" name="attr_XP_recus" value="0" style="width:120px"/></td>
+                  <td><input type="number" class="sheet-table_input" name="attr_XP_dep" value="@{XP_INI}+@{XP_DEF}+@{XP_Habillement}+@{XP_Look}+@{XP_Endurance}+@{XP_Force}+@{XP_Natation}+@{XP_Comedie}+@{XP_Commandement}+@{XP_Interview}+@{XP_Psychologie}+@{XP_Séduction}+@{XP_Étiquette}+@{XP_Composition}+@{XP_Déguisement}+@{XP_Enseignement}+@{XP_Expert1}+@{XP_Expert2}+@{XP_Expert3}+@{XP_Jeu}+@{XP_Perception}+@{XP_Programmation}+@{XP_Suivre}+@{XP_Survie}+@{XP_ArmeA}+@{XP_ArmeL}+@{XP_ArmeFusil}+@{XP_ArmeBlanche}+@{XP_ArmePistolet}+@{XP_Esquive}+@{XP_Cac1}+@{XP_Cac2}+@{XP_Apesanteur}+@{XP_Athlétisme}+@{XP_Conduire}+@{XP_Danse}+@{XP_Discrétion}+@{XP_Pilotage}+@{XP_MéchaArtil}+@{XP_MéchaCombat}+@{XP_MéchaMêlée}+@{XP_MéchaMissile}+@{XP_MéchaPilotage}+@{XP_ConnRue}+@{XP_Interrogatoire}+@{XP_Intimidation}+@{XP_Éloquence}+@{XP_ResiTor}+@{XP_Bricolage}+@{XP_Chanter}+@{XP_Musique}+@{XP_Peinture}+@{XP_Photo}+@{XP_Soins}+@{XP_Réparation}+@{XP_Crochetage}+@{XP_Pickpocket}+@{XP_Explosifs}+@{XP_MechaDesign}+@{XP_MechaTech}+@{XP_SensCombat}+@{XP_Langue1}+@{XP_Langue2}+@{XP_Langue3}+@{XP_Langue4}+@{XP_Recherche}+@{XP_Gestion}+@{XP_Médecine}+@{XP_Sciences1}+@{XP_Sciences2}+@{XP_Sciences3}+@{XP_Sciences4}" disabled="true"  style="width:120px"/></td>
+                  <td style="width:120px"><input type="number" class="sheet-table_input" name="attr_XP_reste" value="@{XP_recus}-(@{XP_dep})" disabled="true" style="width:120px"/></td>
+              </tr>              
           </table>
       </div>
       <div class='sheet-col'>
