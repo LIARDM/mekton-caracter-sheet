@@ -31,7 +31,7 @@
               </tr>
               <tr>
                   <td><input type="number" class="sheet-table_input" name="attr_XP_recus" value="0" style="width:120px"/></td>
-                  <td><input type="number" class="sheet-table_input" name="attr_XP_dep" value="@{XP_INI}+@{XP_DEF}+@{XP_Habillement}+@{XP_Look}+@{XP_Endurance}+@{XP_Force}+@{XP_Natation}+@{XP_Comedie}+@{XP_Commandement}+@{XP_Interview}+@{XP_Psychologie}+@{XP_Séduction}+@{XP_Étiquette}+@{XP_Composition}+@{XP_Déguisement}+@{XP_Enseignement}+@{XP_Expert1}+@{XP_Expert2}+@{XP_Expert3}+@{XP_Jeu}+@{XP_Perception}+@{XP_Programmation}+@{XP_Suivre}+@{XP_Survie}+@{XP_ArmeA}+@{XP_ArmeL}+@{XP_ArmeFusil}+@{XP_ArmeBlanche}+@{XP_ArmePistolet}+@{XP_Esquive}+@{XP_Cac1}+@{XP_Cac2}+@{XP_Apesanteur}+@{XP_Athlétisme}+@{XP_Conduire}+@{XP_Danse}+@{XP_Discrétion}+@{XP_Pilotage}+@{XP_MéchaArtil}+@{XP_MéchaCombat}+@{XP_MéchaMêlée}+@{XP_MéchaMissile}+@{XP_MéchaPilotage}+@{XP_ConnRue}+@{XP_Interrogatoire}+@{XP_Intimidation}+@{XP_Éloquence}+@{XP_ResiTor}+@{XP_Bricolage}+@{XP_Chanter}+@{XP_Musique}+@{XP_Peinture}+@{XP_Photo}+@{XP_Soins}+@{XP_Réparation}+@{XP_Crochetage}+@{XP_Pickpocket}+@{XP_Explosifs}+@{XP_MechaDesign}+@{XP_MechaTech}+@{XP_SensCombat}+@{XP_Langue1}+@{XP_Langue2}+@{XP_Langue3}+@{XP_Langue4}+@{XP_Recherche}+@{XP_Gestion}+@{XP_Médecine}+@{XP_Sciences1}+@{XP_Sciences2}+@{XP_Sciences3}+@{XP_Sciences4}" disabled="true"  style="width:120px"/></td>
+                  <td><input type="number" class="sheet-table_input" name="attr_XP_dep" value="@{XP_INI}+@{XP_DEF}+@{XP_Habillement}+@{XP_Look}+@{XP_Endurance}+@{XP_Force}+@{XP_Natation}+@{XP_Comedie}+@{XP_Commandement}+@{XP_Interview}+@{XP_Psychologie}+@{XP_Séduction}+@{XP_Étiquette}+@{XP_Composition}+@{XP_Déguisement}+@{XP_Enseignement}+@{XP_Expert1}+@{XP_Expert2}+@{XP_Expert3}+@{XP_Jeu}+@{XP_Perception}+@{XP_Programmation}+@{XP_Suivre}+@{XP_Survie}+@{XP_ArmeA}+@{XP_ArmeL}+@{XP_ArmeFusil}+@{XP_ArmeBlanche}+@{XP_ArmePistolet}+@{XP_Esquive}+@{XP_Cac1}+@{XP_Cac2}+@{XP_Apesanteur}+@{XP_Athlétisme}+@{XP_Conduire}+@{XP_Danse}+@{XP_Discrétion}+@{XP_Pilotage}+@{XP_MéchaArtil}+@{XP_MéchaCombat}+@{XP_MéchaMêlée}+@{XP_MéchaMissile}+@{XP_MéchaPilotage}+@{XP_ConnRue}+@{XP_Interrogatoire}+@{XP_Intimidation}+@{XP_Éloquence}+@{XP_ResiTor}+@{XP_Bricolage}+@{XP_Chanter}+@{XP_Musique}+@{XP_Peinture}+@{XP_Photo}+@{XP_Soins}+@{XP_Réparation}+@{XP_Crochetage}+@{XP_Pickpocket}+@{XP_Explosifs}+@{XP_MechaDesign}+@{XP_MechaTech}+@{XP_SensCombat}+@{XP_Langue1}+@{XP_Langue2}+@{XP_Langue3}+@{XP_Langue4}+@{XP_Recherche}+@{XP_Gestion}+@{XP_Médecine}+@{XP_Sciences1}+@{XP_Sciences2}+@{XP_Sciences3}+@{XP_Sciences4}+@{XP_Navi}+@{XP_GeEl}+@{XP_HiGe}+@{XP_Moto}+@{XP_Bateau}+@{XP_EnLo}+@{XP_Heli}+@{XP_Armurier}+@{XP_Cybertech}+@{XP_Pharma}" disabled="true"  style="width:120px"/></td>
                   <td style="width:120px"><input type="number" class="sheet-table_input" name="attr_XP_reste" value="@{XP_recus}-(@{XP_dep})" disabled="true" style="width:120px"/></td>
               </tr>              
           </table>
@@ -617,6 +617,69 @@
             <td><input type="number" class="sheet-table_input" name="attr_Total_Jeu" value="@{Attribut_Jeu}+@{base_Jeu}+@{niv_Jeu}+@{bonus_Jeu}" disabled="true"/></td>
       </tr>
       <tr>
+        <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test de Navigation à [[d10!+ @{Total_Navi} + ?{Modifier|0}]]"></button></td>
+          <td>Navigation</td>
+            <td><select class="sheet-table_input" name="attr_Attribut_Navi">
+              <option value="0"></option>
+              <option value="@{BT}">Beauté</option>
+              <option value="@{CH}">Chance</option>
+              <option value="@{CON}">Constitution</option>
+              <option value="@{EMP}">Empathie</option>
+              <option value="@{INT}" selected>Intelligence</option>
+              <option value="@{MV}">Mouvement</option>
+              <option value="@{REF}">Reflexes</option>
+              <option value="@{SF}">Sang-froid</option>
+              <option value="@{TECH}">Technologie</option></select>
+            </td>
+            <td><input type="number" class="sheet-table_input" name="attr_base_Navi" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_XP_Navi" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_niv_Navi" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_bonus_Navi" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_Total_Navi" value="@{Attribut_Navi}+@{base_Navi}+@{niv_Navi}+@{bonus_Navi}" disabled="true"/></td>
+      </tr>
+      <tr>
+        <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test de Guerre électronique à [[d10!+ @{Total_GeEl} + ?{Modifier|0}]]"></button></td>
+          <td>Guerre électronique [C]</td>
+            <td><select class="sheet-table_input" name="attr_Attribut_GeEl">
+              <option value="0"></option>
+              <option value="@{BT}">Beauté</option>
+              <option value="@{CH}">Chance</option>
+              <option value="@{CON}">Constitution</option>
+              <option value="@{EMP}">Empathie</option>
+              <option value="@{INT}" selected>Intelligence</option>
+              <option value="@{MV}">Mouvement</option>
+              <option value="@{REF}">Reflexes</option>
+              <option value="@{SF}">Sang-froid</option>
+              <option value="@{TECH}">Technologie</option></select>
+            </td>
+            <td><input type="number" class="sheet-table_input" name="attr_base_GeEl" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_XP_GeEl" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_niv_GeEl" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_bonus_GeEl" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_Total_GeEl" value="@{Attribut_GeEl}+@{base_GeEl}+@{niv_GeEl}+@{bonus_GeEl}" disabled="true"/></td>
+      </tr>
+      <tr>
+        <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test d'Histoire - Géo à [[d10!+ @{Total_HiGe} + ?{Modifier|0}]]"></button></td>
+          <td>Histoire / Géo</td>
+            <td><select class="sheet-table_input" name="attr_Attribut_HiGe">
+              <option value="0"></option>
+              <option value="@{BT}">Beauté</option>
+              <option value="@{CH}">Chance</option>
+              <option value="@{CON}">Constitution</option>
+              <option value="@{EMP}">Empathie</option>
+              <option value="@{INT}" selected>Intelligence</option>
+              <option value="@{MV}">Mouvement</option>
+              <option value="@{REF}">Reflexes</option>
+              <option value="@{SF}">Sang-froid</option>
+              <option value="@{TECH}">Technologie</option></select>
+            </td>
+            <td><input type="number" class="sheet-table_input" name="attr_base_HiGe" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_XP_HiGe" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_niv_HiGe" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_bonus_HiGe" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_Total_HiGe" value="@{Attribut_HiGe}+@{base_HiGe}+@{niv_HiGe}+@{bonus_HiGe}" disabled="true"/></td>
+      </tr>
+      <tr>
         <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test de Perception à [[d10!+ @{Total_Perception} + ?{Modifier|0}]]"></button></td>
           <td>Perception</td>
             <td><select class="sheet-table_input" name="attr_Attribut_Perception">
@@ -946,7 +1009,7 @@
       </tr>
       <tr>
         <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test de Conduite à [[d10!+ @{Total_Conduire} + ?{Modifier|0}]]"></button></td>
-          <td>Conduire</td>
+          <td>Conduite de voiture</td>
             <td><select class="sheet-table_input" name="attr_Attribut_Conduire">
               <option value="0"></option>
               <option value="@{BT}">Beauté</option>
@@ -965,6 +1028,49 @@
             <td><input type="number" class="sheet-table_input" name="attr_bonus_Conduire" value="0"/></td>
             <td><input type="number" class="sheet-table_input" name="attr_Total_Conduire" value="@{Attribut_Conduire}+@{base_Conduire}+@{niv_Conduire}+@{bonus_Conduire}" disabled="true"/></td>
       </tr>
+      <tr>
+        <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test de Conduite à [[d10!+ @{Total_Moto} + ?{Modifier|0}]]"></button></td>
+          <td>Conduite de moto</td>
+            <td><select class="sheet-table_input" name="attr_Attribut_Moto">
+              <option value="0"></option>
+              <option value="@{BT}">Beauté</option>
+              <option value="@{CH}">Chance</option>
+              <option value="@{CON}">Constitution</option>
+              <option value="@{EMP}">Empathie</option>
+              <option value="@{INT}">Intelligence</option>
+              <option value="@{MV}">Mouvement</option>
+              <option value="@{REF}" selected>Reflexes</option>
+              <option value="@{SF}">Sang-froid</option>
+              <option value="@{TECH}">Technologie</option></select>
+            </td>
+            <td><input type="number" class="sheet-table_input" name="attr_base_Moto" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_XP_Moto" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_niv_Moto" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_bonus_Moto" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_Total_Moto" value="@{Attribut_Moto}+@{base_Moto}+@{niv_Moto}+@{bonus_Moto}" disabled="true"/></td>
+      </tr>
+      <tr>
+        <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test de Conduite à [[d10!+ @{Total_EnLo} + ?{Modifier|0}]]"></button></td>
+          <td>Conduite d’engins lourds</td>
+            <td><select class="sheet-table_input" name="attr_Attribut_EnLo">
+              <option value="0"></option>
+              <option value="@{BT}">Beauté</option>
+              <option value="@{CH}">Chance</option>
+              <option value="@{CON}">Constitution</option>
+              <option value="@{EMP}">Empathie</option>
+              <option value="@{INT}">Intelligence</option>
+              <option value="@{MV}">Mouvement</option>
+              <option value="@{REF}" selected>Reflexes</option>
+              <option value="@{SF}">Sang-froid</option>
+              <option value="@{TECH}">Technologie</option></select>
+            </td>
+            <td><input type="number" class="sheet-table_input" name="attr_base_EnLo" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_XP_EnLo" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_niv_EnLo" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_bonus_EnLo" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_Total_EnLo" value="@{Attribut_EnLo}+@{base_EnLo}+@{niv_EnLo}+@{bonus_EnLo}" disabled="true"/></td>
+      </tr>
+
       <tr>
         <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test de Danse à [[d10!+ @{Total_Danse} + ?{Modifier|0}]]"></button></td>
           <td>Danse</td>
@@ -1009,7 +1115,7 @@
       </tr>
       <tr>
         <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test de Pilotage à [[d10!+ @{Total_Pilotage} + ?{Modifier|0}]]"></button></td>
-          <td>Pilotage (avion, navette, etc)</td>
+          <td>Pilotage d'avion, navette, etc</td>
             <td><select class="sheet-table_input" name="attr_Attribut_Pilotage">
               <option value="0"></option>
               <option value="@{BT}">Beauté</option>
@@ -1027,6 +1133,48 @@
             <td><input type="number" class="sheet-table_input" name="attr_niv_Pilotage" value="0"/></td>
             <td><input type="number" class="sheet-table_input" name="attr_bonus_Pilotage" value="0"/></td>
             <td><input type="number" class="sheet-table_input" name="attr_Total_Pilotage" value="@{Attribut_Pilotage}+@{base_Pilotage}+@{niv_Pilotage}+@{bonus_Pilotage}" disabled="true"/></td>
+      </tr>
+      <tr>
+        <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test de Pilotage à [[d10!+ @{Total_Heli} + ?{Modifier|0}]]"></button></td>
+          <td>Pilotage d’hélico</td>
+            <td><select class="sheet-table_input" name="attr_Attribut_Heli">
+              <option value="0"></option>
+              <option value="@{BT}">Beauté</option>
+              <option value="@{CH}">Chance</option>
+              <option value="@{CON}">Constitution</option>
+              <option value="@{EMP}">Empathie</option>
+              <option value="@{INT}">Intelligence</option>
+              <option value="@{MV}">Mouvement</option>
+              <option value="@{REF}" selected>Reflexes</option>
+              <option value="@{SF}">Sang-froid</option>
+              <option value="@{TECH}">Technologie</option></select>
+            </td>
+            <td><input type="number" class="sheet-table_input" name="attr_base_Heli" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_XP_Heli" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_niv_Heli" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_bonus_Heli" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_Total_Heli" value="@{Attribut_Heli}+@{base_Heli}+@{niv_Heli}+@{bonus_Heli}" disabled="true"/></td>
+      </tr>
+      <tr>
+        <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test de Pilotage à [[d10!+ @{Total_Bateau} + ?{Modifier|0}]]"></button></td>
+          <td>Pilotage de bateau</td>
+            <td><select class="sheet-table_input" name="attr_Attribut_Bateau">
+              <option value="0"></option>
+              <option value="@{BT}">Beauté</option>
+              <option value="@{CH}">Chance</option>
+              <option value="@{CON}">Constitution</option>
+              <option value="@{EMP}">Empathie</option>
+              <option value="@{INT}">Intelligence</option>
+              <option value="@{MV}">Mouvement</option>
+              <option value="@{REF}" selected>Reflexes</option>
+              <option value="@{SF}">Sang-froid</option>
+              <option value="@{TECH}">Technologie</option></select>
+            </td>
+            <td><input type="number" class="sheet-table_input" name="attr_base_Bateau" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_XP_Bateau" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_niv_Bateau" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_bonus_Bateau" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_Total_Bateau" value="@{Attribut_Bateau}+@{base_Bateau}+@{niv_Bateau}+@{bonus_Bateau}" disabled="true"/></td>
       </tr>
     </tr>
   </table>
@@ -1290,6 +1438,27 @@
         <th style="width:60px">Total</th>
       </tr>
       <tr>
+        <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test d’Armurier à [[d10!+ @{Total_Armurier} + ?{Modifier|0}]]"></button></td>
+          <td>Armurier</td>
+            <td><select class="sheet-table_input" name="attr_Attribut_Armurier">
+              <option value="0"></option>
+              <option value="@{BT}">Beauté</option>
+              <option value="@{CH}">Chance</option>
+              <option value="@{CON}">Constitution</option>
+              <option value="@{EMP}">Empathie</option>
+              <option value="@{INT}">Intelligence</option>
+              <option value="@{MV}">Mouvement</option>
+              <option value="@{REF}">Reflexes</option>
+              <option value="@{SF}">Sang-froid</option>
+              <option value="@{TECH}" selected>Technologie</option></select>
+            </td>
+            <td><input type="number" class="sheet-table_input" name="attr_base_Armurier" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_XP_Armurier" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_niv_Armurier" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_bonus_Armurier" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_Total_Armurier" value="@{Attribut_Armurier}+@{base_Armurier}+@{niv_Armurier}+@{bonus_Armurier}" disabled="true"/></td>
+      </tr>
+      <tr>
         <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test de Bricolage à [[d10!+ @{Total_Bricolage} + ?{Modifier|0}]]"></button></td>
           <td>Bricolage [C]</td>
             <td><select class="sheet-table_input" name="attr_Attribut_Bricolage">
@@ -1309,6 +1478,27 @@
             <td><input type="number" class="sheet-table_input" name="attr_niv_Bricolage" value="0"/></td>
             <td><input type="number" class="sheet-table_input" name="attr_bonus_Bricolage" value="0"/></td>
             <td><input type="number" class="sheet-table_input" name="attr_Total_Bricolage" value="@{Attribut_Bricolage}+@{base_Bricolage}+@{niv_Bricolage}+@{bonus_Bricolage}" disabled="true"/></td>
+      </tr>
+      <tr>
+        <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test de Cybertech à [[d10!+ @{Total_Cybertech} + ?{Modifier|0}]]"></button></td>
+          <td>Cybertech [C]</td>
+            <td><select class="sheet-table_input" name="attr_Attribut_Cybertech">
+              <option value="0"></option>
+              <option value="@{BT}">Beauté</option>
+              <option value="@{CH}">Chance</option>
+              <option value="@{CON}">Constitution</option>
+              <option value="@{EMP}">Empathie</option>
+              <option value="@{INT}">Intelligence</option>
+              <option value="@{MV}">Mouvement</option>
+              <option value="@{REF}">Reflexes</option>
+              <option value="@{SF}">Sang-froid</option>
+              <option value="@{TECH}" selected>Technologie</option></select>
+            </td>
+            <td><input type="number" class="sheet-table_input" name="attr_base_Cybertech" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_XP_Cybertech" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_niv_Cybertech" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_bonus_Cybertech" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_Total_Cybertech" value="@{Attribut_Cybertech}+@{base_Cybertech}+@{niv_Cybertech}+@{bonus_Cybertech}" disabled="true"/></td>
       </tr>
       <tr>
         <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test de Chant à [[d10!+ @{Total_Chanter} + ?{Modifier|0}]]"></button></td>
@@ -1415,6 +1605,28 @@
             <td><input type="number" class="sheet-table_input" name="attr_bonus_Soins" value="0"/></td>
             <td><input type="number" class="sheet-table_input" name="attr_Total_Soins" value="@{Attribut_Soins}+@{base_Soins}+@{niv_Soins}+@{bonus_Soins}" disabled="true"/></td>
       </tr>
+      <tr>
+        <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test de Pharmacologie à [[d10!+ @{Total_Pharma} + ?{Modifier|0}]]"></button></td>
+          <td>Pharmacologie</td>
+            <td><select class="sheet-table_input" name="attr_Attribut_Pharma">
+              <option value="0"></option>
+              <option value="@{BT}">Beauté</option>
+              <option value="@{CH}">Chance</option>
+              <option value="@{CON}">Constitution</option>
+              <option value="@{EMP}">Empathie</option>
+              <option value="@{INT}">Intelligence</option>
+              <option value="@{MV}">Mouvement</option>
+              <option value="@{REF}">Reflexes</option>
+              <option value="@{SF}">Sang-froid</option>
+              <option value="@{TECH}" selected>Technologie</option></select>
+            </td>
+            <td><input type="number" class="sheet-table_input" name="attr_base_Pharma" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_XP_Pharma" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_niv_Pharma" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_bonus_Pharma" value="0"/></td>
+            <td><input type="number" class="sheet-table_input" name="attr_Total_Pharma" value="@{Attribut_Pharma}+@{base_Pharma}+@{niv_Pharma}+@{bonus_Pharma}" disabled="true"/></td>
+      </tr>
+
       <tr>
         <td><button type='roll' class="sheet-roll" style="width:35px;" value="/e fait un test de Réparation basique à [[d10!+ @{Total_Réparation} + ?{Modifier|0}]]"></button></td>
           <td>Réparation basique</td>
@@ -1815,3 +2027,381 @@
 </div>
 
 <!-- Partie Equipement -->
+
+<div>
+  <table class="sheet-black">
+   <tr><th colspan="3">Argents et autres richesses</th></tr>
+   <tr>
+    <th style="width:100px">Nombre</th>
+    <th style="width:200px">Monnaie / objet</th>
+    <th style="width:300px">Banque / localisation</th>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ArgentNbr1" value="1000"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_pp_ArgentType1" value="Euro"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_pp_ARgentLieu1" value="Amsterdamsche Wisselbank"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ArgentNbr2"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_pp_ArgentType2"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_pp_ARgentLieu2"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ArgentNbr3"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_pp_ArgentType3"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_pp_ARgentLieu3"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ArgentNbr4"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_pp_ArgentType4"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_pp_ARgentLieu4"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ArgentNbr5"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_pp_ArgentType5"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_pp_ARgentLieu5"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ArgentNbr6"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_pp_ArgentType6"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_pp_ARgentLieu6"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ArgentNbr7"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_pp_ArgentType7"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_pp_ARgentLieu7"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ArgentNbr8"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_pp_ArgentType8"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_pp_ARgentLieu8"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ArgentNbr9"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_pp_ArgentType9"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_pp_ARgentLieu9"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ArgentNbr10"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_pp_ArgentType10"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_pp_ARgentLieu10"/></td>
+   </tr>
+  </table>
+</div>
+<div>
+  <table class="sheet-black">
+   <tr><th colspan="4">Objets et possessions</th></tr>
+   <tr>
+    <th style="width:100px">Nombre</th>
+    <th style="width:200px">Équipement</th>
+    <th style="width:100px">Valeur</th>
+    <th style="width:200px">Localisation</th>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr01"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType01"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur01"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu01"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr02"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType02"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur02"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu02"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr03"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType03"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur03"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu03"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr04"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType04"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur04"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu04"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr05"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType05"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur05"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu05"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr06"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType06"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur06"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu06"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr07"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType07"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur07"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu07"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr08"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType08"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur08"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu08"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr09"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType09"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur09"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu09"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr10"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType10"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur10"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu10"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr11"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType11"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur11"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu11"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr12"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType12"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur12"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu12"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr13"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType13"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur13"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu13"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr14"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType14"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur14"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu14"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr14"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType14"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur14"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu14"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr15"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType15"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur15"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu15"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr16"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType16"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur16"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu16"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr17"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType17"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur17"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu17"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr18"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType18"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur18"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu18"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr19"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType19"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur19"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu19"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr20"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType20"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur20"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu20"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr21"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType21"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur21"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu21"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr22"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType22"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur22"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu22"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr23"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType23"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur23"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu23"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr24"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType24"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur24"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu24"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr25"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType25"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur25"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu25"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr26"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType26"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur26"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu26"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr27"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType27"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur27"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu27"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr28"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType28"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur28"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu28"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr29"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType29"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur29"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu29"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr30"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType30"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur30"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu30"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr31"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType31"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur31"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu31"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr32"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType32"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur32"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu32"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr33"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType33"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur33"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu33"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr34"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType34"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur34"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu34"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr35"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType35"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur35"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu35"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr36"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType36"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur36"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu36"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr37"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType37"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur37"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu37"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr38"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType38"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur38"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu38"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr39"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType39"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur39"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu39"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr40"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType40"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur40"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu40"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr41"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType41"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur41"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu41"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr42"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType42"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur42"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu42"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr43"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType43"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur43"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu43"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr44"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType44"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur44"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu44"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr45"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType45"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur45"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu45"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr46"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType46"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur46"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu46"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr47"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType47"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur47"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu47"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr48"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType48"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur48"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu48"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr49"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType49"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur49"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu49"/></td>
+   </tr>
+   <tr>
+    <td><input type="number" class="sheet-table_input" name="attr_ObjNbr50"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjType50"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjValeur50"/></td>
+    <td><input type="text" class="sheet-table_input" name="attr_ObjLieu50"/></td>
+   </tr>
+  </table>
+</div>
